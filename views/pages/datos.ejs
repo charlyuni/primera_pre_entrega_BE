@@ -1,0 +1,27 @@
+<%- include('index')  %> 
+
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Productos Cargados</h1>
+      <a href="http://localhost:8080/api/productos/form" type="button" class="btn btn-secondary">Cargar un nuevo producto</a>
+    </div>
+
+
+<div class="card-columns" id="cards"> 
+
+    <% data.forEach(function(data) { %>
+        <div class="card m-3 p-2" >
+        <div class="card-body">
+      <img class="card-img-top " src= '<%= data.thumbnailUrl %>'  alt =<%= data.thumbnailUrl %> >
+
+      <h4 class="card-title"><%= data.title %></h4>
+      <p class="card-text"><%= data.precio %></p>
+      <h5 class="card-text"> <%= data.Categoria %> </h5>
+      <a href="#" class="btn btn-primary" id = "buttons" data-set=<%= data.id %>>Comprar</a>
+      <a href="./<%= data.id %>" class="btn btn-info admin" data-set=<%= data.id %> >Ver Mas</a>
+      <a href="./update/<%= data.id %>" class="btn btn-warning admin" data-set=<%= data.id %> >Actualizar</a>
+    </div>
+</div>
+    <% }); %> 
+  </div>
+

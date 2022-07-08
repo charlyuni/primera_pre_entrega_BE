@@ -1,0 +1,22 @@
+<%- include('index')  %> 
+
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Formulario de ingreso de productos</h1>
+      <a href="http://localhost:8080/productos" type="button" class="btn btn-secondary">Ver productos cargados</a>
+    </div>
+    <form action="api/productos/" class="was-validated m-2 w-50 " method="POST" >
+        <div class="form-group p-2">
+        <input type="number" class="form-control m-2" id="price" placeholder="Enter precio" name="price" required>
+        <input type="text" class="form-control m-2" id="title" placeholder="Enter title" name="title" required>
+        <input type="text" class="form-control m-2" id="thumbnailUrl" placeholder="Enter thumbnailUrl" name="thumbnailUrl" required>
+        <input type="number" class="form-control m-2" id="reviews" placeholder="Enter reviews" name="reviews" required>
+        <input type="number" class="form-control m-2" id="star" placeholder="Enter star" name="star" required>
+        <input type="text" class="form-control m-2" id="Categoria" placeholder="Enter Categoria" name="Categoria" required>
+        <input type="text" class="form-control m-2" id="description" placeholder="Enter description" name="description" required>
+        <input type="number" class="form-control m-2" id="stock" placeholder="Enter stock" name="stock" required>
+     
+        <button type="submit"  id="button"  class="btn btn-primary m-2">Subir</button>
+      </form>
+    
+    </div>
